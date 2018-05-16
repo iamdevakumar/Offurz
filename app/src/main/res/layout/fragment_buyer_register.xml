@@ -1,0 +1,172 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="50dp"
+        android:id="@+id/fragments"
+        tools:context="com.shadowws.offursdemo.SellerRegister">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BUYER REGISTRATION"
+            android:gravity="center"
+            android:textColor="#000"
+            android:id="@+id/sellerReg"
+            android:layout_marginTop="30dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/buyer_name_layout"
+                android:layout_width="match_parent"
+                app:errorEnabled="true"
+                android:textColorHint="#000"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/buyerReg_name"
+                    android:layout_width="match_parent"
+                    android:textColor="#000"
+                    android:theme="@style/EditTextHint"
+                    android:layout_height="match_parent"
+                    android:hint="@string/Name" />
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/buyer_email_layout"
+                android:layout_width="match_parent"
+                app:errorEnabled="true"
+                android:textColorHint="#000"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:hint="@string/Email"
+                    android:textColor="#000"
+                    android:theme="@style/EditTextHint"
+                    android:id="@+id/buyerReg_email" />
+            </android.support.design.widget.TextInputLayout>
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/buyer_phone_layout"
+                android:layout_width="match_parent"
+                app:errorEnabled="true"
+                android:textColorHint="#000"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:ems="10"
+                    android:hint="@string/mobileNo"
+                    android:id="@+id/buyerReg_mobileNo"
+                    android:theme="@style/EditTextHint"
+                    android:textColor="#000"
+                    android:layout_width="match_parent" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/buyer_address_layout"
+                android:layout_width="match_parent"
+                app:errorEnabled="true"
+                android:textColorHint="#000"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:hint="@string/address"
+                    android:theme="@style/EditTextHint"
+                    android:textColor="#000"
+                    android:id="@+id/buyerReg_address" />
+            </android.support.design.widget.TextInputLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/city"
+                android:textColor="#000" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#000"
+                android:id="@+id/spinner_city"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#000"
+                android:text="@string/state" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_state"
+                android:backgroundTint="#000"
+
+                />
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/buyer_useName_layout"
+                android:layout_width="match_parent"
+                app:errorEnabled="true"
+                android:textColorHint="#000"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="@string/username"
+                    android:textColor="#000"
+                    android:theme="@style/EditTextHint"
+                    android:id="@+id/buyerReg_userName" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/buyer_password_layout"
+                android:layout_width="match_parent"
+                app:errorEnabled="true"
+                android:textColorHint="#000"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:theme="@style/EditTextHint"
+                    android:hint="@string/password"
+                    android:textColor="#000"
+                    android:id="@+id/buyerReg_password" />
+            </android.support.design.widget.TextInputLayout>
+               <Button
+                android:text="Submit"
+                android:layout_width="121dp"
+                android:textColor="#fff"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/round_button"
+                android:layout_height="wrap_content"
+                android:id="@+id/buyerRegSubmit" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

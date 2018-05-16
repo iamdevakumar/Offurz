@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_custom_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    android:background="@android:color/transparent">
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/networkMessage"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="130dp"-->
+    <!--android:gravity="center"-->
+    <!--android:text="ERROR"-->
+    <!--android:textColor="@color/failed" />-->
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/delete"
+        android:id="@+id/image_delete"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/image_delete"
+        android:id="@+id/networkText"
+        android:gravity="center"
+        android:text="Do you delete this product" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/networkText">
+
+        <Button
+            android:id="@+id/delete_yesBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@id/networkText"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_shadow"
+            android:textColor="#fff"
+            android:layout_marginBottom="20dp"
+            android:text="Yes" />
+        <Button
+            android:id="@+id/delete_noBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/yesBtn"
+            android:layout_below="@id/networkText"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_shadow"
+            android:textColor="#fff"
+            android:layout_marginBottom="20dp"
+            android:text="No" />
+    </LinearLayout>
+</RelativeLayout>

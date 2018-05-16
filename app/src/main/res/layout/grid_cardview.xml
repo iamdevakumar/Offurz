@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="10dp"
+        card_view:cardMaxElevation="1dp"
+        card_view:cardElevation="1dp"
+        android:layout_gravity="center"
+        app:contentPadding="5dp"
+        app:cardBackgroundColor="@color/lightGrey"
+        android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/redToolbar"
+            android:textSize="20dp"
+            android:id="@+id/header"/>
+<!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:id="@+id/cardView_layout"-->
+    <!--&gt;-->
+    <!--<GridView-->
+        <!--android:numColumns="2"-->
+        <!--android:gravity="center"-->
+        <!--android:columnWidth="100dp"-->
+        <!--android:stretchMode="columnWidth"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/grid"-->
+        <!--/>-->
+        <!--</LinearLayout>-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/viewer_layout"
+            android:layout_height="wrap_content" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp" >
+            </android.support.v4.view.ViewPager>
+
+
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/pager"
+                android:gravity="bottom"
+                android:padding="10dip"
+                app:centered="true"
+                app:fillColor="#FF0000"
+                app:snap="false" />
+        </RelativeLayout>
+
+        <!--<Button-->
+            <!--android:id="@+id/home_addcart_btn"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/viewer_layout"-->
+            <!--android:background="@drawable/cancel_rounded_button"-->
+            <!--android:text="Get Coupon"-->
+            <!--android:textColor="@color/redToolbar" />-->
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

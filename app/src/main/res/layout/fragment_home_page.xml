@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context="com.shadowws.offurz.Fragments.HomePageFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <!--<SearchView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="50dp"-->
+        <!--android:clickable="true"-->
+        <!--android:queryHint="Search Here"-->
+        <!--android:back_img="@color/colorAccent"-->
+        <!--android:id="@+id/homepage_search"/>-->
+    <!--<SearchView-->
+        <!--android:id="@+id/searchView1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<AutoCompleteTextView-->
+            <!--android:id="@+id/autoCompleteTextView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_marginLeft="30dp"-->
+            <!--android:layout_marginRight="30dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:dropDownVerticalOffset="5dp"-->
+            <!--android:dropDownWidth="wrap_content"-->
+            <!--android:inputType="textAutoComplete|textAutoCorrect"-->
+            <!--android:popupBackground="#fff"-->
+            <!--android:drawableLeft="@drawable/ic_action_search"-->
+            <!--android:textColor="#fff"-->
+            <!--android:textColorHint="#fff"-->
+            <!--android:singleLine="true"-->
+            <!--android:hint="Search"-->
+            <!--android:focusable="true"-->
+            <!--android:focusableInTouchMode="true"-->
+             <!--&gt;-->
+    <!--</AutoCompleteTextView>-->
+
+
+    <!--<SearchView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:back_img="@android:color/white"-->
+        <!--android:id="@+id/search_product">-->
+        <!--<requestFocus/>-->
+        <!--</SearchView>-->
+
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:id="@+id/home_recyler"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_below="@+id/search_product"-->
+        <!--android:layout_height="match_parent"-->
+       <!--/>-->
+
+    <!--<SearchView-->
+        <!--android:id="@+id/search_product"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:theme="@style/SearchView"-->
+        <!--app:defaultQueryHint="Search here..."-->
+        <!--android:background="@drawable/search_style"-->
+        <!--&gt;-->
+        <!--<requestFocus/>-->
+    <!--</SearchView>-->
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/home_tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_product"
+        android:layout_marginTop="20dp"
+        app:tabGravity="fill"
+        android:background="#00000000"
+        app:tabIndicatorColor="@color/redToolbar"
+        android:minHeight="?attr/actionBarSize"
+        />
+
+    <!-- View pager to swipe views -->
+    <FrameLayout
+        android:id="@+id/home_container_layout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/home_tabLayout"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/home_pager"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"/>
+
+    />
+</RelativeLayout>

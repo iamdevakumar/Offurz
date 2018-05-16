@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/otp_forgot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textColor="@color/redToolbar"
+        android:text="Enter Verification Number" />
+
+    <EditText
+        android:id="@+id/otp_forgotEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/otp_forgot"
+        android:backgroundTint="@color/redToolbar"
+        android:layout_marginRight="20dp"
+        android:ems="10"
+        android:inputType="number"
+         />
+
+    <Button
+        android:id="@+id/otp_forgotBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:background="@drawable/cancel_rounded_button"
+        android:text="Verify"
+        android:layout_below="@+id/otp_forgotEdit"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

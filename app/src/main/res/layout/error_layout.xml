@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+      android:foregroundGravity="center"
+        app:srcCompat="@drawable/orange_error"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/error_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView3"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColor="@color/redToolbar"
+        android:textSize="20dp"
+        android:text=""
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/errorBtn"
+        android:layout_width="wrap_content"
+        android:background="@drawable/cancel_rounded_button"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/error_msg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+</RelativeLayout>

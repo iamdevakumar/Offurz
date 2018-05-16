@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.shadowws.offurz.Fragments.HotDealsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:id="@+id/hotDeals_recyler"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_below="@+id/search_product"-->
+        <!--android:layout_height="match_parent"-->
+        <!--/>-->
+    <SearchView
+        android:id="@+id/search_product"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+       android:queryHint="Search here..."
+        android:background="@drawable/search_style"
+        ></SearchView>
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/gridview"
+        android:layout_below="@+id/search_product"
+        android:numColumns="2"
+         />
+</RelativeLayout>

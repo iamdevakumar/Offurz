@@ -1,0 +1,74 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shadowws.offurz.Fragments.ReviewAndRatingFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/ratingTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorAccent"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:text="Rating" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:progressTint="@color/yellow"
+        android:outlineProvider="background"
+        android:layout_marginTop="19dp"
+        android:progressBackgroundTint="@color/colorAccent"
+        android:stepSize="0.5"
+        android:layout_below="@+id/ratingTextView"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/rating_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reviewsTextView"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Enter Comment here..."
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorAccent"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+
+    <TextView
+        android:id="@+id/reviewsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingBar"
+        android:textColor="@color/colorAccent"
+        android:layout_marginTop="13dp"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:text="Reviews" />
+
+
+
+    <Button
+        android:id="@+id/reviewSubmitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/cancel_rounded_button"
+        android:layout_centerVertical="true"
+        android:text="Submit" />
+</RelativeLayout>
+</ScrollView>

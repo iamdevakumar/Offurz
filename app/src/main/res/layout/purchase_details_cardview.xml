@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="@color/lightGrey"
+        card_view:cardCornerRadius="8dp"
+        android:layout_marginTop="10dp">
+        <!--android:background="@drawable/redbg"-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/purchase_productDetailsName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:layout_marginLeft="10dp"
+                android:textSize="18dp" />
+            <TextView
+                android:id="@+id/purchase_cuponCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Cupon Code"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/redToolbar"
+                android:textSize="18dp" >
+            </TextView>
+                <TextView
+                    android:id="@+id/purchase_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Price"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/redToolbar"
+                    android:textSize="18dp" >
+                </TextView>
+                <TextView
+                    android:id="@+id/purchase_offerPercentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Offer Percentage"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="18dp" >
+                </TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="160dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/purchase_productDetailsName_ans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shoe "
+                        android:layout_marginLeft="10dp"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:id="@+id/purchase_cuponCode_ans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="SH29"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/redToolbar"
+                        android:textSize="18dp" >
+                    </TextView>
+                    <TextView
+                        android:id="@+id/purchase_price_ans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Rs.500"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/redToolbar"
+                        android:textSize="18dp" >
+                    </TextView>
+                    <TextView
+                        android:id="@+id/purchase_offerPercentage_ans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="20%"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="18dp" >
+                    </TextView>
+            </LinearLayout>
+
+            <ImageView
+            android:id="@+id/delete_icon"
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:layout_alignParentRight="true"
+                android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_action_deleteblack" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

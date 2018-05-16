@@ -1,0 +1,274 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="100dp"
+        android:id="@+id/fragments"
+        tools:context="com.shadowws.offursdemo.SellerRegister">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MANAGE ADS"
+            android:gravity="center"
+            android:textColor="#000"
+            android:id="@+id/sellerAdsReg"
+            android:layout_marginTop="40dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/sellerAdsReg_productName_layout"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                app:errorEnabled="true"
+                android:textColorHint="#000"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editAdsReg_productName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:theme="@style/EditTextHint"
+                    android:inputType="text"
+                    android:textColor="#000"
+                    android:hint="@string/productName" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/sellerAdsReg_layout_cuponCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#000"
+                app:errorEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editAdsReg_cuponCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/cuponCode"
+                    android:inputType="text"
+                    android:textColor="#000"
+                    android:theme="@style/EditTextHint" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/sellerAdsReg_layout_aPrice"
+                android:layout_width="match_parent"
+                app:errorEnabled="true"
+                android:textColorHint="#000"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/EditTextHint"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:hint="@string/ActualPrice"
+                    android:textColor="#000"
+                    android:id="@+id/editAdsReg_aPrice" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/sellerAdsReg_offeredpercentage_layout"
+                android:layout_width="match_parent"
+                app:errorEnabled="true"
+                android:textColorHint="#000"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="#000"
+                    android:ems="10"
+                    android:theme="@style/EditTextHint"
+                    android:hint="@string/offeredPercentage"
+                    android:id="@+id/editAdsReg_offPercentage" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/sellerAdsReg_layout_offeredPrice"
+                android:layout_width="match_parent"
+                app:errorEnabled="true"
+                android:textColorHint="#000"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editAdsReg_offPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/EditTextHint"
+                    android:inputType="number"
+                    android:textColor="#000"
+                    android:hint="@string/offeredPrice" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/editAdsReg_count_layout"
+                android:layout_width="match_parent"
+                app:errorEnabled="true"
+                android:textColorHint="#000"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/editAdsReg_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:hint="@string/count"
+                    android:theme="@style/EditTextHint"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:text="Categories"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/cat_spinner">
+
+            </Spinner>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/editAdsReg_layout_description"
+                android:layout_width="match_parent"
+                app:errorEnabled="true"
+                android:textColorHint="#000"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#000"
+                    android:theme="@style/EditTextHint"
+                    android:ems="10"
+                    android:hint="@string/description"
+                    android:id="@+id/editAdsReg_description" />
+            </android.support.design.widget.TextInputLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Select_main_img"
+                android:textColor="#000"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"
+                android:text="Select Main Image"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editchoose_image"
+                    android:textColor="#fff"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp"
+                    android:background="@drawable/round_button"
+                    android:text="Choose image"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="18dp"
+                    android:textColor="#000"
+                    android:padding="5dp"
+                    android:id="@+id/edit_choose_image_text"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Select_Multiple_img"
+                android:textColor="#000"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"
+                android:text="Select Multiple Image (Only 3)"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageButton
+                    android:id="@+id/edit_imageButton1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/add_more_pic" />
+                <ImageButton
+                    android:id="@+id/edit_imageButton2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/add_more_pic" />
+                <ImageButton
+                    android:id="@+id/edit_imageButton3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/add_more_pic" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:text="Edit"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_gravity="center"
+                    android:textColor="#fff"
+                    android:background="@drawable/round_button"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editAdsRegEdit" />
+
+            <Button
+                android:text="Submit"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="30dp"
+                android:textColor="#fff"
+                android:background="@drawable/round_button"
+                android:layout_height="wrap_content"
+                android:id="@+id/editAdsRegSubmit" />
+                <Button
+                    android:text="Cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center"
+                    android:textColor="#fff"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/round_button"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editAdsRegCancel" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</ScrollView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EB2C3B</color>
+    <color name="colorPrimaryDark">#EB2C3B</color>
+    <color name="colorAccent">#000</color>
+    <color name="redToolbar">#EB2C3B</color>
+    <color name="textcolor">#ffff</color>
+    <color name="yellow">#F9F398</color>
+    <color name="lightGrey">#d3d3d3</color>
+    <color name="backgroundclr">#e9e9e9</color>
+
+    <color name="enabled_color">#F7FE2E</color>
+    <color name="black">#000</color>
+    <color name="waste">#FC2D2D</color>
+
+</resources>

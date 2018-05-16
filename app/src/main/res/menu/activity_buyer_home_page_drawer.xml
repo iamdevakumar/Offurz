@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_trendingOffers"
+            android:icon="@drawable/trending_offers"
+            android:title="Trendig Offers" />
+
+        <item
+            android:id="@+id/nav_hotDeals"
+            android:icon="@drawable/hot_deals"
+            android:title="Hot Deals" />
+        <item
+            android:id="@+id/nav_newLaunchProducts"
+            android:icon="@drawable/new_launch"
+            android:title="New Launch Products" />
+
+        <item
+            android:id="@+id/nav_bestSeller"
+            android:icon="@drawable/bestseller"
+            android:title="Best Seller" />
+        <item
+            android:id="@+id/nav_purchaseDetails"
+            android:icon="@drawable/purchase_product"
+            android:title="Purchase Details" />
+        <item
+            android:id="@+id/nav_changePassword"
+            android:icon="@drawable/change_password"
+            android:title="Change Password" />
+        <!--<item-->
+            <!--android:id="@+id/nav_enquiry"-->
+            <!--android:icon="@drawable/enquiry"-->
+            <!--android:title="Enquiry" />-->
+        <item
+            android:id="@+id/nav_AboutUs"
+            android:icon="@drawable/aboutus"
+            android:title="About Us" />
+        <item
+            android:id="@+id/nav_TermsConditions"
+            android:icon="@drawable/forms"
+            android:title="Terms and Conditions" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/log_out"
+            android:title="Logout" />
+    </group>
+
+
+</menu>

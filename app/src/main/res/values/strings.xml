@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">Offurz</string>
+    <string name="title_activity_home_page">HomePage</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_help">Help</string>
+    <string name="action_login">Login</string>
+    <string name="action_signup">Sign Up</string>
+    <string name="home_page_buyer">BUYER</string>
+    <string name="home_page_seller">SELLER</string>
+    <string name="Name">Name</string>
+    <string name="Company">Company</string>
+    <string name="Email">Email</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="Package">Package</string>
+    <string name="mobileNo">Mobile Number</string>
+    <string name="website">Website</string>
+    <string name="address">Address</string>
+    <string name="username">User Name</string>
+    <string name="password">Password</string>
+    <string name="productName">Product Name</string>
+    <string name="ActualPrice">Actual Price</string>
+    <string name="cuponCode">Cupon Code</string>
+    <string name="offeredPercentage">Offered Percentage</string>
+    <string name="offeredPrice">Offered Price</string>
+    <string name="description">Description</string>
+    <string name="count">Count</string>
+    <string name="setting">Setting</string>
+    <item name="visible" type="id" />
+    <item name="masked" type="id" />
+    <string name="firstname">First Name *</string>
+    <string name="lastname">Last Name * </string>
+    <string name="message">Message</string>
+    <string name="logout">Logout</string>
+    <string name="home">Home</string>
+    <string name="terms_conditions">I have read and agree to the <a href="link"><f color="#ff00">terms and conditions</f></a></string>
+    <string name="Terms_Conditions">Terms &amp; Conditions</string>
+    <string name="termsCon_content">Welcome to the services.in site.Seller Services Private Limited provides this
+        site to you subject to the following conditions. By visiting the services.in site (the “Site”), you accept
+        these conditions. Please read them carefully. In addition, when you use any current or future service or business,
+        you also will be subject to the guidelines, terms and agreements applicable to such service or business. These ‘Conditions
+        of Use’ constitute an electronic record within the meaning of the applicable law.</string>
+    <string name="privacy">Privacy</string>
+    <string name="privacy_content">Please review our Privacy Notice, which also governs your visit to this Site, to understand our practices.Your privacy is important to us, and we know that you care about how information about your order is used and shared. We would like our international customers and customers shipping products internationally to be aware that cross-border shipments are subject to opening and inspection by customs and/or postal authorities.Also, we may provide certain order, shipment, and product information, such as titles, to our international carriers, and such information may be communicated by the carriers to customs and/or postal authorities in order to facilitate customs clearance and comply with local laws.</string>
+    <string name="your_activity">Your Activity On the Services Site</string>
+    <string name="your_activity_content">Amazon Site is not intended for use by children. If you are a minor i.e. under the age of 18 years, you may use the Site and Amazon only with involvement of a parent or guardian. Amazon and its affiliates reserve the right to refuse service, terminate accounts, or remove or edit content in their sole discretion</string>
+    <string name="your_activity_1">  * You must not use the Site in any way that causes, or is likely to cause, the website or access to it to be interrupted, damaged or impaired in any way. </string>
+    <string name="your_activity_2">  * You understand that you, and not Amazon, are responsible for all electronic communications and content sent from your computer to us and you must use the Site for lawful purposes only and only in accordance with the applicable law.</string>
+    <string name="cuponTerms">Coupon Terms &amp; Condition</string>
+    <string name="cuponTerms_content1">  1. The offer contained in the electronic communication ("E-Coupons") is subject to You being a registered user ("Users") of www.ebay.in or m.ebay.in (“eBay Website”). These terms and conditions are in addition to the eBay Website User Agreement, PaisaPay Agreement, Privacy Policy and other eBay Rules and Policies ("eBay UA &amp; Policies").</string>
+    <string name="cuponTerms_content2">  2. The offer contained in the electronic communication (“E-Coupons”) is not intended to person resident outside India and minors and person incompetent to contract and any acceptance of offer and usage of E-Coupons by these persons shall be invalid and void ab-initio. E-Coupons are also not offered to, and shall not be used by, such Users who under any statutory obligations are prohibited to use E-Coupons.</string>
+    <string name="cuponTerms_content3">  3. E-Coupon is the property of eBay Website and eBay has the right to cancel/alter the E-Coupons at will and at any time (including during the validity period of the E-Coupon) without giving any prior intimation to the User or the coupon provider. E-Coupon is a privilege and not a right or claim against eBay. E-Coupons can also be cancelled in case the User is in violation of eBay UAs &amp; Policies.</string>
+    <string name="limitation">Limitation</string>
+    <string name="limitation_content">For products shipped internationally, please note that any manufacturer warranty may not be valid; manufacturer service options may not be available; product manuals, instructions and safety warnings may not be in destination country languages; the products (and accompanying materials) may not be designed in accordance with destination country standards, specifications, and labeling requirements; and the products may not conform to destination country voltage and other electrical standards (requiring use of an adapter or converter if appropriate). You are responsible for assuring that the product can be lawfully imported to the destination country.</string>
+    <string name="ServiceDescription">Service Description</string>
+    <string name="ServiceDescription_content">Seller and its affiliates attempt to be as accurate as possible. However, It does not warrant that descriptions of or other content of this site is accurate, complete, reliable, current, or error-free. Also, your access to the Site may also be occasionally suspended or restricted to allow for repairs, maintenance, or the introduction of new facilities or at any time without prior notice. We will attempt to limit the frequency and duration of any such suspension or restriction. It provides links to other sites over which has no control. It is not responsible for the availability of such external sites or resources and does not endorse and is not responsible or liable for any content, advertising, products or other material on or available from such sites or resources.</string>
+    <string name="AboutOffers4U">About Offerz</string>
+    <string name="AboutOffers4U_content">Offerz is building the daily habit in local commerce, offering a vast mobile and online marketplace where people discover and save on amazing things to do, see, eat and buy. By enabling real-time commerce across local businesses, travel destinations, consumer products and live events, shoppers can find the best a city has to offer. Offerz is redefining how small businesses attract and retain customers by providing them with customizable and scalable marketing tools and services to profitably grow their businesses..</string>
+    <string name="WhyOffers4U">Why Offerz</string>
+    <string name="content"><b>Free to Join</b>\n\tCreating your account with offerz.com will not cost you a rupee. There is no joining fees either upfront or at any other time..<b>\n\tDiscount Coupons</b>\nWe offer you exclusive coupons and discount vouchers that are compatible with cashback, enabling you to get an instant discount in addition to your cashback earnings. GoPaisa team is constantly bringing you the best offers.<b>\nFreedom to choose</b>\nYou have the freedom to choose how you want your cash back. Customers can either request for a online bank transfer or redeem the cash in your GoPaisa account<b>\nExclusive Offers</b>\nCollaborating with your favorite online retailers we bring you some exclusive offers and coupons that you won\t find anywhere else.<b>\nBest Service</b>\nTo provide our customers an efficient smart and beneficial shopping experience. Your cashback purchases track perfectly in the first time itself but for those that do not, we will see every enquiry through to a resolution, while we aim to respond to every help ticket within 48 hours.<b>\nTrusted</b>\nWe aim to operate to the highest professional standards. Your information is protected with stringent security measures.</string>
+
+    <string name="OurValues">Our Values</string>
+    <string name="OurValues_content"><b>Build Great Neighborhoods</b>.\nWe believe in great communities. Specifically, we believe that successful local businesses are the backbone of vibrant spaces. It’s the combination of interesting and thriving businesses coupled with people who visit frequently. We are the thing that connects them, and we can make things better for both — building amazing communities in the process through our economic impact.<b> \nAct Like Its Your Business.</b>\nWe work with thousands of small business owners, and they take hard looks at every decision they make because each can mean success or failure for their business. To succeed, they have to get creative. They run lean. They get the absolute most from their teams. And, they plan for the long term.<b>Make Life Less Boring.</b>\nWe think life should be fun. For our customers that means showing them the amazing things they can experience right outside their doors and virtually anywhere they go. For merchants, it means helping make their businesses successful and their lives easier. For employees, it means building a great place to work.<b>\nBegin And End With The Customer.</b>\nCustomers are why we’re here. They drive our business. When customers view us as a daily habit — as something indispensable — it will mean we’re solving fundamental challenges and delivering amazing value. Whether it’s consumers or the merchants we connect them with, everything we do should begin and end with the customer.</string>
+    <string name="Our_Support">Our 24/7 Support</string>
+    <string name="Our_support_content">Offerz is a fashion marketplace, with a focus on personalization. We believe can be fashionable everyday. To deliver this promise, we have built a sophisticated stylist recommendation functionality. Using our in-house AI platform, we help users discover the most relevant fashion that suits their body, lifestyle, personality and budget. At offerz, we strive to provide everything that women require – a vast collection of fashionable products from Indian and International manufacturers at low prices to suit every budget and reliable delivery. Our robust systems provide complete purchase protection in every transaction.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="PhoneNumber">Phone Number</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_swipe_fragment">Offurz</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_buyer_home_page">BuyerHomePage</string>
+    <string name="exit">Do you want Logout</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+</resources>
