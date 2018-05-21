@@ -78,7 +78,7 @@ public class BuyerRegisterFragment extends Fragment {
     ArrayList<String> citArray;
     Spinner Cityspinner,Statespinner;
     Bundle bundle;
-    TextInputEditText buyerNameTxt,buyerEmailTxt,buyerAddressTxt,buyerMobileTxt,buyerUserNameTxt,buyerPasswordTxt;
+    TextInputEditText buyerNameTxt,buyerEmailTxt,buyerAddressTxt,buyerMobileTxt,buyerUserNameTxt,buyerPasswordTxt,buyerconfirmPasswordTxt;
     TextInputLayout buyerNameLay,buyerEmailLay,buyerAddressLay,buyerMobileLay,buyerUserNameLay,buyerPasswordLay;
 
     public BuyerRegisterFragment() {
@@ -141,6 +141,7 @@ public class BuyerRegisterFragment extends Fragment {
         buyerAddressTxt = (TextInputEditText)buyerView.findViewById(R.id.buyerReg_address);
         buyerUserNameTxt = (TextInputEditText)buyerView.findViewById(R.id.buyerReg_userName);
         buyerPasswordTxt = (TextInputEditText)buyerView.findViewById(R.id.buyerReg_password);
+        buyerconfirmPasswordTxt = (TextInputEditText)buyerView.findViewById(R.id.buyerReg_confirm_password);
 
         buyerNameLay = (TextInputLayout)buyerView.findViewById(R.id.buyer_name_layout);
         buyerEmailLay = (TextInputLayout)buyerView.findViewById(R.id.buyer_email_layout);
@@ -178,6 +179,8 @@ public class BuyerRegisterFragment extends Fragment {
                     buyerUserNameLay.setError("Please Enter Username");
                 } else if (buyerPasswordTxt.getText().toString().trim().equalsIgnoreCase("")) {
                     buyerPasswordLay.setError("Please Enter Password");
+                } else if (buyerPasswordTxt.getText().toString().trim().equalsIgnoreCase(buyerconfirmPasswordTxt.getText().toString().trim())) {
+                    buyerPasswordLay.setError("Please Enter Correct Password");
                 } else
                    // BuyerRegistrationPost("http://logistic.shadowws.in/buyer_add.php");
                 BuyerRegistrationPost("http://offurz.com/buyer_add.php");

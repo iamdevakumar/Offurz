@@ -33,8 +33,6 @@ public class EmptyData extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private OnFragmentInteractionListener mListener;
-
     public EmptyData() {
         // Required empty public constructor
     }
@@ -73,29 +71,7 @@ public class EmptyData extends Fragment {
         return inflater.inflate(R.layout.fragment_empty_data, container, false);
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-//        if (context instanceof OnFragmentInteractionListener) {
-//            mListener = (OnFragmentInteractionListener) context;
-//        } else {
-//            throw new RuntimeException(context.toString()
-//                    + " must implement OnFragmentInteractionListener");
-//        }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
 
     /**
      * This interface must be implemented by activities that contain this
@@ -107,51 +83,6 @@ public class EmptyData extends Fragment {
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
      */
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
-    }
 
 
-    @Override
-    public void onResume() {
-
-        super.onResume();
-        getView().setFocusableInTouchMode(true);
-        getView().requestFocus();
-        getView().setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-
-                if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK) {
-                    SharedPreferences back=getActivity().getSharedPreferences("back", Context.MODE_PRIVATE);
-                    if(back.getInt("back",0)!=1) {
-                        Log.d("back", String.valueOf(back.getInt("back",0)));
-                        Log.d("kk","kk");
-                        FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                        transaction.replace(R.id.buyer_main_container, new HomePageFragment());
-                        transaction.commit();
-                    }
-                    else
-                    {
-                        Log.d("back", String.valueOf(back.getInt("back",0)));
-                        Log.d("kk123","kk");
-                        SharedPreferences back1=getActivity().getSharedPreferences("back", Context.MODE_PRIVATE);
-                        SharedPreferences.Editor bac=back1.edit();
-                        bac.putInt("back",0);
-                        bac.commit();
-                        FragmentTransaction ft = getFragmentManager().beginTransaction();
-                        ft.replace(R.id.buyer_main_container, new EmptyData());
-                        ft.commit();
-                    }
-//                FragmentTransaction ft = getFragmentManager().beginTransaction();
-//                ft.replace(R.id.home_page_container,new HomePageFragment());
-//                ft.commit();
-                }
-                return true;
-            }
-        });
-
-
-    }
 }

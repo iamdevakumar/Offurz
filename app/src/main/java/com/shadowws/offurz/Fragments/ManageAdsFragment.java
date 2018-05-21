@@ -108,7 +108,7 @@ public class ManageAdsFragment extends Fragment {
         // Inflate the layout for this fragment
         View manageAd_view =  inflater.inflate(R.layout.fragment_manage_ads, container, false);
        // ManageAdsGet("http://logistic.shadowws.in/mn_ads.php");
-        ManageAdsGet("http://offurz.com/mn_ads.php");
+      //  ManageAdsGet("http://offurz.com/mn_ads.php");
         manageAdList = (ListView)manageAd_view.findViewById(R.id.manageAd_listview);
 
         return manageAd_view;
@@ -130,7 +130,8 @@ public class ManageAdsFragment extends Fragment {
 //            throw new RuntimeException(context.toString()
 //                    + " must implement OnFragmentInteractionListener");
 //        }
-    }
+        ManageAdsGet("http://offurz.com/mn_ads.php");
+        }
 
     @Override
     public void onDetach() {

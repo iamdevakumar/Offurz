@@ -83,7 +83,7 @@ public class SellerRegistationFragment extends Fragment {
     private String mParam2;
     APIInterface apiInterface;
     ProgressDialog pDialog;
-    TextInputEditText sellerNameTxt,sellerMobileNoTxt,sellerPackageTxt,sellerCompanyTct,sellerWebsiteTxt,sellerAddressTxt,sellerEmailTxt,sellerUserNameTxt,sellerPasswordTxt;
+    TextInputEditText sellerNameTxt,sellerMobileNoTxt,sellerPackageTxt,sellerCompanyTct,sellerWebsiteTxt,sellerconfirmPasswordTxt,sellerAddressTxt,sellerEmailTxt,sellerUserNameTxt,sellerPasswordTxt;
     TextInputLayout sellerNameLay,sellerMobileNoLay,sellerPackageLay,sellerCompanyLay,sellerWebsiteLay,sellerAddressLay,sellerEmailLay,sellerUsernameLay,sellerPasswordLay;
     private OnFragmentInteractionListener mListener;
     Spinner Cityspinner,Statespinner;
@@ -146,6 +146,7 @@ public class SellerRegistationFragment extends Fragment {
         sellerEmailTxt = (TextInputEditText)sellerView.findViewById(R.id.sellerReg_email);
         sellerUserNameTxt = (TextInputEditText)sellerView.findViewById(R.id.sellerReg_username);
         sellerPasswordTxt = (TextInputEditText)sellerView.findViewById(R.id.sellerReg_password);
+        sellerconfirmPasswordTxt = (TextInputEditText)sellerView.findViewById(R.id.sellerReg_confirm_password);
 
         sellerNameLay = (TextInputLayout)sellerView.findViewById(R.id.sellerReg_name_layout);
         sellerMobileNoLay = (TextInputLayout)sellerView.findViewById(R.id.sellerReg_phone_layout);
@@ -161,7 +162,7 @@ public class SellerRegistationFragment extends Fragment {
         imageView = (ImageView)sellerView.findViewById(R.id.sellerReg_image);
         bundle = this.getArguments();
         if(bundle != null) {
-            sellerNameTxt.setText(bundle.getString("name"));
+            sellerUserNameTxt.setText(bundle.getString("name"));
             sellerMobileNoTxt.setText(bundle.getString("mobile"));
         }
         GetStateandCity("http://offurz.com/city_state.php");
@@ -182,7 +183,7 @@ public class SellerRegistationFragment extends Fragment {
                 startActivityForResult(photoPickerIntent, SELECT_PHOTO3);
             }
         });
-        sellerNameTxt.setEnabled(false);
+        sellerUserNameTxt.setEnabled(false);
         sellerMobileNoTxt.setEnabled(false);
         Button sellerRegSubimitBtn = (Button)sellerView.findViewById(R.id.sellerRegSubmit);
         sellerRegSubimitBtn.setOnClickListener(new View.OnClickListener() {
@@ -204,8 +205,10 @@ public class SellerRegistationFragment extends Fragment {
                 }else if(sellerUserNameTxt.getText().toString().trim().equalsIgnoreCase("")){
                     sellerUsernameLay.setError("Please Enter Email");
                 }else if(sellerPasswordTxt.getText().toString().trim().equalsIgnoreCase("")){
-                    sellerPasswordLay.setError("Please Enter Email");
-                }else
+                    sellerPasswordLay.setError("Please Enter Password");
+                }else if(!sellerPasswordTxt.getText().toString().trim().equalsIgnoreCase(sellerconfirmPasswordTxt.getText().toString().trim())){
+                   sellerPasswordLay.setError("Please Enter right password");
+               }else
               // SellerRegisterPost("http://logistic.shadowws.in/seller_add.php");
                 SellerRegisterPost("http://offurz.com/seller_add.php");
 

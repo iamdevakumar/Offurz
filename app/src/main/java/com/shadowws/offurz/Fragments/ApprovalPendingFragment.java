@@ -24,6 +24,7 @@ import com.shadowws.offurz.SellerHomePagePurchaseBuyer;
  * create an instance of this fragment.
  */
 public class ApprovalPendingFragment extends Fragment {
+    public static String approvalpending="Approvalpending";
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -36,17 +37,9 @@ public class ApprovalPendingFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
 
     public ApprovalPendingFragment() {
-        // Required empty public constructor
+
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ApprovalPendingFragment.
-     */
     // TODO: Rename and change types and number of parameters
     public static ApprovalPendingFragment newInstance(String param1, String param2) {
         ApprovalPendingFragment fragment = new ApprovalPendingFragment();
@@ -73,12 +66,6 @@ public class ApprovalPendingFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_approval_pending, container, false);
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
 
     @Override
     public void onAttach(Context context) {
@@ -94,7 +81,7 @@ public class ApprovalPendingFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
-        mListener = null;
+
     }
 
     /**
@@ -115,7 +102,7 @@ public class ApprovalPendingFragment extends Fragment {
     public void onResume() {
 
         super.onResume();
-        getView().setFocusableInTouchMode(true);
+       /* getView().setFocusableInTouchMode(true);
         getView().requestFocus();
         getView().setOnKeyListener(new View.OnKeyListener() {
             @Override
@@ -149,7 +136,7 @@ public class ApprovalPendingFragment extends Fragment {
                 }
                 return true;
             }
-        });
+        });*/
 
 
     }

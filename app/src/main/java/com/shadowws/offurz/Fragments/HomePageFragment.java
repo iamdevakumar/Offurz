@@ -409,7 +409,7 @@ public class HomePageFragment extends Fragment implements TabLayout.OnTabSelecte
 
         super.onResume();
 
-        getView().setFocusableInTouchMode(true);
+        /*getView().setFocusableInTouchMode(true);
         getView().requestFocus();
         getView().setOnKeyListener(new View.OnKeyListener() {
             @Override
@@ -474,7 +474,7 @@ public class HomePageFragment extends Fragment implements TabLayout.OnTabSelecte
                 return false;
             }
 
-        });
+        });*/
 
     }
 

@@ -21,6 +21,7 @@
     <string name="address">Address</string>
     <string name="username">User Name</string>
     <string name="password">Password</string>
+    <string name="confirmpassword">Confirm Password</string>
     <string name="productName">Product Name</string>
     <string name="ActualPrice">Actual Price</string>
     <string name="cuponCode">Cupon Code</string>

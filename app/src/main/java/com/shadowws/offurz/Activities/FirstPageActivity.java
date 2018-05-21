@@ -2,15 +2,23 @@ package com.shadowws.offurz.Activities;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.shadowws.offurz.Fragments.LoginPageFragment;
@@ -117,12 +125,48 @@ public class FirstPageActivity extends AppCompatActivity {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         Fragment fragment = getSupportFragmentManager().findFragmentByTag(fragname);
         if (count == 0) {
+            getFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            int fragcount = getFragmentManager().getBackStackEntryCount();
+            Log.d("Count",""+fragcount);
+            if (fragcount == 0) {
+                final Dialog dialog = new Dialog(this);
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setContentView(R.layout.custom_dialog);
+                Button btnSave = (Button) dialog.findViewById(R.id.save);
+                Button cancel = (Button) dialog.findViewById(R.id.cancel);
+                btnSave.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        //                           moveTaskToBack(true);
+//                                    finish();
+//                                    System.exit(0);
+                        SharedPreferences preferences = getApplicationContext().getSharedPreferences("loginPrefs", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.clear();
+                        editor.commit();
+                        SharedPreferences walletPreference = getApplicationContext().getSharedPreferences("buyerData", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editorWallet = walletPreference.edit();
+                        editorWallet.clear();
+                        editorWallet.commit();
 
-            super.onBackPressed();
-            //additional code
-        }else if(!fragname.equals("")){
-            transaction.remove(fragment);
-        }
+
+                        Intent intent = new Intent(getApplicationContext(), FirstPageActivity.class);
+                        intent.putExtra("finish", true);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // To clean up all activities
+                        startActivity(intent);
+                        finish();
+                        //additional code
+                    }
+                });
+                cancel.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
+            }
+            }
         else{
             getFragmentManager().popBackStack();
         }

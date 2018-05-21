@@ -1,5 +1,6 @@
 package com.shadowws.offurz;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -27,7 +28,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -163,9 +166,42 @@ public class HomePage extends AppCompatActivity
             int count = getFragmentManager().getBackStackEntryCount();
             Log.d("Count",""+count);
             if (count == 0) {
-                super.onBackPressed();
-                Log.d("Back Press","Back Press");
-                // finish();
+                final Dialog dialog = new Dialog(this);
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setContentView(R.layout.custom_dialog);
+                Button btnSave = (Button) dialog.findViewById(R.id.save);
+                Button cancel = (Button) dialog.findViewById(R.id.cancel);
+                btnSave.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        //                           moveTaskToBack(true);
+//                                    finish();
+//                                    System.exit(0);
+                        SharedPreferences preferences = getApplicationContext().getSharedPreferences("loginPrefs", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.clear();
+                        editor.commit();
+                        SharedPreferences walletPreference = getApplicationContext().getSharedPreferences("buyerData", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editorWallet = walletPreference.edit();
+                        editorWallet.clear();
+                        editorWallet.commit();
+
+
+                        Intent intent = new Intent(getApplicationContext(), FirstPageActivity.class);
+                        intent.putExtra("finish", true);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // To clean up all activities
+                        startActivity(intent);
+                        finish();
+                        //additional code
+                    }
+                });
+                cancel.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
             }
 
 //            if(getFragmentManager().findFragmentByTag("home")){

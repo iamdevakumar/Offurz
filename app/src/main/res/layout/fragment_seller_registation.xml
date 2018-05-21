@@ -247,7 +247,21 @@
                     android:theme="@style/EditTextHint"
                     android:id="@+id/sellerReg_password" />
             </android.support.design.widget.TextInputLayout>
-
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/sellerReg_confirm_password_layout"
+                android:layout_width="match_parent"
+                app:errorEnabled="true"
+                android:textColorHint="#000"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="#000"
+                    android:hint="@string/confirmpassword"
+                    android:theme="@style/EditTextHint"
+                    android:id="@+id/sellerReg_confirm_password" />
+            </android.support.design.widget.TextInputLayout>
             <Button
                 android:text="Submit"
                 android:layout_width="121dp"
