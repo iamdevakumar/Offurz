@@ -78,14 +78,7 @@ public class PurchaseBuyerDetailsFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment PurchaseBuyerDetailsFragment.
-     */
+
     // TODO: Rename and change types and number of parameters
     public static PurchaseBuyerDetailsFragment newInstance(String param1, String param2) {
         PurchaseBuyerDetailsFragment fragment = new PurchaseBuyerDetailsFragment();
@@ -114,7 +107,6 @@ public class PurchaseBuyerDetailsFragment extends Fragment {
 
       //  PurchaseBuyerDetailsGet("http://logistic.shadowws.in/get_pur_buyer_details.php");
         PurchaseBuyerDetailsGet("http://offurz.com/get_pur_buyer_details.php");
-
         return purchaseBuyerDetails;
     }
 
@@ -166,9 +158,6 @@ public class PurchaseBuyerDetailsFragment extends Fragment {
         RequestQueue queue = Volley.newRequestQueue(getContext());
 
         pref = getContext().getSharedPreferences("sellerData", 0);
-//        Log.d("purchaseDetailsShare",pref.getString("user_id",null));
-//        Log.d("purchaseDetailsShare",pref.getString("mobile",null));
-//        Log.d("purchaseDetailsShare",pref.getString("company",null));
         JSONObject js = new JSONObject();
         try {
 

@@ -111,15 +111,7 @@ Button editChooseImg;
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ManageAdsEditFragment.
-     */
-    // TODO: Rename and change types and number of parameters
+     // TODO: Rename and change types and number of parameters
     public static ManageAdsEditFragment newInstance(String param1, String param2) {
         ManageAdsEditFragment fragment = new ManageAdsEditFragment();
         Bundle args = new Bundle();
@@ -578,29 +570,9 @@ Button editChooseImg;
         return manageeditView;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-//        if (context instanceof OnFragmentInteractionListener) {
-//            mListener = (OnFragmentInteractionListener) context;
-//        } else {
-//            throw new RuntimeException(context.toString()
-//                    + " must implement OnFragmentInteractionListener");
-//        }
-    }
 
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
+
 
     /**
      * This interface must be implemented by activities that contain this
@@ -1027,48 +999,5 @@ Button editChooseImg;
                 DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         queue.add(jsObjRequest);
     }
-
-//
-//    @Override
-//    public void onResume() {
-//        super.onResume();
-//        getView().setFocusableInTouchMode(true);
-//        getView().requestFocus();
-//        getView().setOnKeyListener(new View.OnKeyListener() {
-//            @Override
-//            public boolean onKey(View v, int keyCode, KeyEvent event) {
-//
-//                if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK) {
-//                    SharedPreferences back=getActivity().getSharedPreferences("back", Context.MODE_PRIVATE);
-//                    if(back.getInt("back",0)!=1) {
-//                        Log.d("back", String.valueOf(back.getInt("back",0)));
-//                        Log.d("kk","kk");
-//                        FragmentTransaction transaction = getFragmentManager().beginTransaction();
-//                        transaction.replace(R.id.main_container, new SellerHomePagePurchaseBuyer());
-//                        transaction.commit();
-//                    }
-//                    else
-//                    {
-//                        Log.d("back", String.valueOf(back.getInt("back",0)));
-//                        Log.d("kk123","kk");
-//                        SharedPreferences back1=getActivity().getSharedPreferences("back", Context.MODE_PRIVATE);
-//                        SharedPreferences.Editor bac=back1.edit();
-//                        bac.putInt("back",0);
-//                        bac.commit();
-//
-//                        FragmentTransaction ft = getFragmentManager().beginTransaction();
-//                        ft.replace(R.id.main_container, new ManageAdsEditFragment());
-//                        ft.commit();
-//                    }
-////                FragmentTransaction ft = getFragmentManager().beginTransaction();
-////                ft.replace(R.id.home_page_container,new HomePageFragment());
-////                ft.commit();
-//                }
-//                return true;
-//            }
-//        });
-//
-//
-//    }
 
 }

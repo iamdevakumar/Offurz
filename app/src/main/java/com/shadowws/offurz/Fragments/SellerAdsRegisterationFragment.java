@@ -345,29 +345,7 @@ sellerCountTxt.setOnFocusChangeListener(new View.OnFocusChangeListener() {
         return sellerAdsView;
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-//        if (context instanceof OnFragmentInteractionListener) {
-//            mListener = (OnFragmentInteractionListener) context;
-//        } else {
-//            throw new RuntimeException(context.toString()
-//                    + " must implement OnFragmentInteractionListener");
-//        }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
 
     /**
      * This interface must be implemented by activities that contain this
@@ -551,6 +529,7 @@ sellerCountTxt.setOnFocusChangeListener(new View.OnFocusChangeListener() {
      //   pDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#FC2D2D")));
         // pDialog.setTitle("Please Wait");
         pDialog.setMessage("Loading...");
+        pDialog.setCancelable(false);
        // pDialog.setProgressStyle();
         pDialog.show();
 
@@ -830,49 +809,4 @@ sellerCountTxt.setOnFocusChangeListener(new View.OnFocusChangeListener() {
         return catArrayList;
     }
 
-
-
-
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        getView().setFocusableInTouchMode(true);
-        getView().requestFocus();
-        getView().setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-
-                if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK) {
-                    SharedPreferences back=getActivity().getSharedPreferences("back", Context.MODE_PRIVATE);
-                    if(back.getInt("back",0)!=1) {
-                        Log.d("back", String.valueOf(back.getInt("back",0)));
-                        Log.d("kk","kk");
-                        FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                        transaction.replace(R.id.main_container, new SellerHomePagePurchaseBuyer());
-                        transaction.commit();
-                    }
-                    else
-                    {
-                        Log.d("back", String.valueOf(back.getInt("back",0)));
-                        Log.d("kk123","kk");
-                        SharedPreferences back1=getActivity().getSharedPreferences("back", Context.MODE_PRIVATE);
-                        SharedPreferences.Editor bac=back1.edit();
-                        bac.putInt("back",0);
-                        bac.commit();
-
-                        FragmentTransaction ft = getFragmentManager().beginTransaction();
-                        ft.replace(R.id.main_container, new SellerAdsRegisterationFragment());
-                        ft.commit();
-                    }
-//                FragmentTransaction ft = getFragmentManager().beginTransaction();
-//                ft.replace(R.id.home_page_container,new HomePageFragment());
-//                ft.commit();
-                }
-                return true;
-            }
-        });
-
-
-    }
 }

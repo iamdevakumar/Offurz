@@ -125,10 +125,7 @@ public class FirstPageActivity extends AppCompatActivity {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         Fragment fragment = getSupportFragmentManager().findFragmentByTag(fragname);
         if (count == 0) {
-            getFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-            int fragcount = getFragmentManager().getBackStackEntryCount();
-            Log.d("Count",""+fragcount);
-            if (fragcount == 0) {
+
                 final Dialog dialog = new Dialog(this);
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 dialog.setContentView(R.layout.custom_dialog);
@@ -165,7 +162,6 @@ public class FirstPageActivity extends AppCompatActivity {
                     }
                 });
                 dialog.show();
-            }
             }
         else{
             getFragmentManager().popBackStack();

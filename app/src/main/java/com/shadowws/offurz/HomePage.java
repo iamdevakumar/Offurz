@@ -112,27 +112,8 @@ public class HomePage extends AppCompatActivity
         prefEditor.putString("type","seller");
         Log.d(TAG, "sellerRegLog" + 1);
         prefEditor.commit();
-
-//        mWindowManager = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
-//        mSearchView = new MaterialSearchView(this);
-//        mSearchView.setOnSearchListener(this);
-//        mSearchView.setSearchResultsListener(this);
-//        mSearchView.setHintText("Search");
-//        if (mToolbar != null) {
-//            // Delay adding SearchView until Toolbar has finished loading
-//            mToolbar.post(new Runnable() {
-//                @Override
-//                public void run() {
-//                    if (!mSearchViewAdded && mWindowManager != null) {
-//                        mWindowManager.addView(mSearchView,
-//                                MaterialSearchView.getSearchViewLayoutParams(HomePage.this));
-//                        mSearchViewAdded = true;
-//                    }
-//                }
-//            });
-//        }
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.main_container, new SellerHomePagePurchaseBuyer());
+        transaction.add(R.id.main_container, new SellerHomePagePurchaseBuyer());
         transaction.commit();
 
         SharedPreferences pref = getSharedPreferences("sellerData",0);
@@ -164,7 +145,7 @@ public class HomePage extends AppCompatActivity
 
             getFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
             int count = getFragmentManager().getBackStackEntryCount();
-            Log.d("Count",""+count);
+            Log.d("Count", "" + count);
             if (count == 0) {
                 final Dialog dialog = new Dialog(this);
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -203,30 +184,14 @@ public class HomePage extends AppCompatActivity
                 });
                 dialog.show();
             }
-
-//            if(getFragmentManager().findFragmentByTag("home")){
-//
-//            }
-
-
-//
-//            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-//            transaction.replace(R.id.main_container, new HomePageFragment());
-//            transaction.commit();
-
+            }
         }
-    }
+
+
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         Log.d("inside menu","iside Menu");
         if (isChangeMenu) {
-//            MenuItem itemCart = menu.findItem(R.id.action_adcart);
-//            icon = (LayerDrawable) itemCart.getIcon();
-           // setBadgeCount(this, icon, "9");
-//            menu.findItem(R.id.action_adcart).setIcon(R.drawable.ic_action_cart_white);
-//        } else {
-//            menu.findItem(R.id.action_adcart).setIcon(R.drawable.ic_action_cart_white);
-//        }
         }
 
         return super.onPrepareOptionsMenu(menu);
@@ -343,14 +308,17 @@ public class HomePage extends AppCompatActivity
           // fragment = new SellerAdsRegisterationFragment();
 
         } else if (id == R.id.nav_manageAds) {
-          fragment =  new ManageAdsFragment();
-
+          //  fragment = new ManageAdsFragment();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.main_container, new ManageAdsFragment());
+            transaction.commit();
         } else if (id == R.id.nav_purchaseBuyerDetails) {
-            fragment = new PurchaseBuyerDetailsFragment();
-
+         //   fragment = new PurchaseBuyerDetailsFragment();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.main_container, new PurchaseBuyerDetailsFragment());
+            transaction.commit();
         } else if (id == R.id.nav_settings) {
-            fragment = new SettingsFragment();
-
+            fragment =  new SettingsFragment();
 //        }else if (id == R.id.nav_enquiry) {
 //           fragment = new EnquiryFragment();
         } else if (id == R.id.nav_logout) {
@@ -495,19 +463,6 @@ JSONObject js = new JSONObject();
                     e.printStackTrace();
                 }
 
-//                try {
-//                   // JSONArray jsarray = new JSONArray(response.toString());
-//
-//                    Log.d("BestSeller", "Array value" + response.toString());
-//                //    Log.d("BestSeller", "Array size" + jsarray.length());
-//
-//
-////                    }
-//
-//
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
 
             }
         }, new com.android.volley.Response.ErrorListener() {
